@@ -153,7 +153,7 @@ class Game extends React.Component {
                     <div><button onClick={() => this.newGame()}>New Game</button></div>
                     <div><button onClick={() => this.playAsX()}>Play As X</button></div>
                     <div><button onClick={() => this.playAsO()}>Play As O</button></div>
-                    <div><input type="text" value={this.state.searchSize} onChange={(event) => this.updateSearchSize(event)}/></div>
+                    <div>Search Size: <input type="text" value={this.state.searchSize} onChange={(event) => this.updateSearchSize(event)}/></div>
                 </div>
             </div>
         );
