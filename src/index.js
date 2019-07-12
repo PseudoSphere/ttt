@@ -106,6 +106,11 @@ class Game extends React.Component {
     }
 
     newGame() {
+        if(this.state.searchSize < 50) {
+            this.setState({
+                searchSize: 50
+            });
+        }
         agent.newGame();
         const newState = Array(9).fill(null)
         this.setState({
@@ -154,7 +159,7 @@ class Game extends React.Component {
                     <div><button onClick={() => this.newGame()}>New Game</button></div>
                     <div><button onClick={() => this.playAsX()}>Play As X</button></div>
                     <div><button onClick={() => this.playAsO()}>Play As O</button></div>
-                    <div>Search Size: <input type="text" value={this.state.searchSize} onChange={(event) => this.updateSearchSize(event)}/></div>
+                    <div>Search Size (min 50): <input type="text" value={this.state.searchSize} onChange={(event) => this.updateSearchSize(event)}/></div>
                 </div>
             </div>
         );
