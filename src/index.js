@@ -140,10 +140,11 @@ class Game extends React.Component {
         if (winner) {
           status = 'Winner: ' + winner;
         } else {
-          status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+          status = 'You are playing as ' + (this.state.xIsNext ? 'X' : 'O');
         }
         return (
             <div className="game">
+                <h1>Tic Tac Toe Using MCTS</h1>
                 <div className="game-board">
                     <Board squares={this.state.squares}
                     onClick={(i) => this.handleClick(i)}/>
