@@ -40,11 +40,10 @@ ol, ul {
   background: #ddd;
 }
 
-.game {
-  display: flex;
-  flex-direction: row;
+.game-board {
+  float:left;
 }
-
 .game-info {
+  float: left;
   margin-left: 20px;
 }
